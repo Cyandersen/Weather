@@ -9,4 +9,5 @@
     <string name="mTime">mTime</string>
     <string name="mTempfeel">mTempfeel</string>
     <string name="mWindspeed">mWindspeed</string>
+    <string name="mTempmax">mTempmax</string>
 </resources>

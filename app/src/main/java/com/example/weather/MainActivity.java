@@ -29,7 +29,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
-    TextView mDate,mCity,mTemp,mDescription, mTempfeel, mWindspeed;
+    TextView mDate,mCity,mTemp,mDescription,mTempfeel,mTempmax;
     ImageView imgIcon;
     String maVille="Toronto";
 
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-        mWindspeed=findViewById(R.id.mWindspeed);
+        mTempmax=findViewById(R.id.mTempmax);
         mTempfeel=findViewById(R.id.mTempfeel);
         mDate=findViewById(R.id.mDate);
         mCity=findViewById(R.id.mCity);
@@ -94,8 +94,8 @@ public class MainActivity extends AppCompatActivity {
                     String temp=String.valueOf(tempC);
                     int feels_likeC=(int)Math.round((main_object.getDouble("feels_like")));
                     String feels_like=String.valueOf(feels_likeC);
-                    int speedC=(int)Math.round((main_object.getDouble("speed")));
-                    String speed=String.valueOf(speedC);
+                    int temp_maxC=(int)Math.round((main_object.getDouble("temp_max")));
+                    String temp_max=String.valueOf(temp_maxC);
                     String description=object.getString("description");
                     String city=response.getString("name");
                     String icon=object.getString("icon");
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                     mTemp.setText(temp);
                     mTempfeel.setText(feels_like);
                     mDescription.setText(description);
-                    mWindspeed.setText(speed);
+                    mTempmax.setText(temp_max);
                     Calendar calendar=Calendar.getInstance();
                     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEEE, MMMM dd");
                     String formatted_date=simpleDateFormat.format(calendar.getTime());
