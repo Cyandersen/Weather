@@ -4,6 +4,9 @@
     <string name="mTemp">Temperature</string>
     <string name="Date">mDate</string>
     <string name="City">mCity</string>
-    <string name="degrees">textView3</string>
     <string name="o">o</string>
+    <string name="search">Search</string>
+    <string name="mTime">mTime</string>
+    <string name="mTempfeel">mTempfeel</string>
+    <string name="mWindspeed">mWindspeed</string>
 </resources>
